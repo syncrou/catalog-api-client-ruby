@@ -1,4 +1,4 @@
-# OpenapiClient::SharePolicy
+# CatalogApiClientRuby::SharePolicy
 
 ## Properties
 
@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::SharePolicy.new(permissions: [&quot;catalog:portfolios:read&quot;,&quot;catalog:portfolios:update&quot;,&quot;catalog:portfolios:delete&quot;,&quot;catalog:portfolios:order&quot;],
+instance = CatalogApiClientRuby::SharePolicy.new(permissions: [&quot;catalog:portfolios:read&quot;,&quot;catalog:portfolios:update&quot;,&quot;catalog:portfolios:delete&quot;,&quot;catalog:portfolios:order&quot;],
                                  group_uuids: null)
 ```
 

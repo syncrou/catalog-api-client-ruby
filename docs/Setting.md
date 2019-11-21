@@ -1,4 +1,4 @@
-# OpenapiClient::Setting
+# CatalogApiClientRuby::Setting
 
 ## Properties
 
@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::Setting.new(name: default_workflow,
+instance = CatalogApiClientRuby::Setting.new(name: default_workflow,
                                  value: 2)
 ```
 

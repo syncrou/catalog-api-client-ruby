@@ -1,4 +1,4 @@
-# OpenapiClient::TenantApi
+# CatalogApiClientRuby::TenantApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -22,21 +22,21 @@ Get a list of tenants.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TenantApi.new
+api_instance = CatalogApiClientRuby::TenantApi.new
 
 begin
   #List Tenants
   result = api_instance.list_tenants
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TenantApi->list_tenants: #{e}"
 end
 ```
@@ -71,22 +71,22 @@ Gets the tenant specified by the tenant id.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TenantApi.new
+api_instance = CatalogApiClientRuby::TenantApi.new
 tenant_id = 'tenant_id_example' # String | ID of the resource
 
 begin
   #Get a specific Tenant
   result = api_instance.show_tenant(tenant_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TenantApi->show_tenant: #{e}"
 end
 ```
@@ -124,21 +124,21 @@ Run a task to seed the Tenant Groups required for an org admin to onboard additi
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TenantApi.new
+api_instance = CatalogApiClientRuby::TenantApi.new
 tenant_id = 'tenant_id_example' # String | ID of the resource
 
 begin
   #Seed Tenant Groups
   api_instance.tenant_seed(tenant_id)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TenantApi->tenant_seed: #{e}"
 end
 ```

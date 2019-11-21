@@ -1,4 +1,4 @@
-# OpenapiClient::ProgressMessage
+# CatalogApiClientRuby::ProgressMessage
 
 ## Properties
 
@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::ProgressMessage.new(received_at: null,
+instance = CatalogApiClientRuby::ProgressMessage.new(received_at: null,
                                  level: null,
                                  message: This is a sample message,
                                  order_item_id: null)

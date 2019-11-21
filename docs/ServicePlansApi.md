@@ -1,4 +1,4 @@
-# OpenapiClient::ServicePlansApi
+# CatalogApiClientRuby::ServicePlansApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -24,24 +24,24 @@ Returns the new Service Plan
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::ServicePlansApi.new
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
 opts = {
-  import_service_plan: OpenapiClient::ImportServicePlan.new # ImportServicePlan | 
+  import_service_plan: CatalogApiClientRuby::ImportServicePlan.new # ImportServicePlan | 
 }
 
 begin
   #Create Service Plan
   result = api_instance.create_service_plan(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling ServicePlansApi->create_service_plan: #{e}"
 end
 ```
@@ -77,25 +77,25 @@ Patch Service Plan Modified Schema
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::ServicePlansApi.new
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
 id = 'id_example' # String | ID of the resource
 opts = {
-  patch_modified_service_plan: OpenapiClient::PatchModifiedServicePlan.new # PatchModifiedServicePlan | 
+  patch_modified_service_plan: CatalogApiClientRuby::PatchModifiedServicePlan.new # PatchModifiedServicePlan | 
 }
 
 begin
   #Patch Service Plan Modified Schema
   result = api_instance.patch_service_plan_modified(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling ServicePlansApi->patch_service_plan_modified: #{e}"
 end
 ```
@@ -134,22 +134,22 @@ Returns the specified Service Plan
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::ServicePlansApi.new
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Show Service Plan
   result = api_instance.show_service_plan(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling ServicePlansApi->show_service_plan: #{e}"
 end
 ```
@@ -187,22 +187,22 @@ Returns the specified Service Plan's base schema
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::ServicePlansApi.new
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Show Service Plan Base Schema
   result = api_instance.show_service_plan_base(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling ServicePlansApi->show_service_plan_base: #{e}"
 end
 ```
@@ -240,22 +240,22 @@ Returns the specified Service Plan's modified schema
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::ServicePlansApi.new
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Show Service Plan modified Schema
   result = api_instance.show_service_plan_modified(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling ServicePlansApi->show_service_plan_modified: #{e}"
 end
 ```

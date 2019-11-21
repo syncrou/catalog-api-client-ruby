@@ -1,4 +1,4 @@
-# OpenapiClient::CollectionLinks
+# CatalogApiClientRuby::CollectionLinks
 
 ## Properties
 
@@ -12,9 +12,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::CollectionLinks.new(first: null,
+instance = CatalogApiClientRuby::CollectionLinks.new(first: null,
                                  last: null,
                                  prev: null,
                                  _next: null)

@@ -1,4 +1,4 @@
-# OpenapiClient::PortfolioItemNextName
+# CatalogApiClientRuby::PortfolioItemNextName
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::PortfolioItemNextName.new(next_name: Copy of Nginx)
+instance = CatalogApiClientRuby::PortfolioItemNextName.new(next_name: Copy of Nginx)
 ```
 
 

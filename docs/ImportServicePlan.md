@@ -1,4 +1,4 @@
-# OpenapiClient::ImportServicePlan
+# CatalogApiClientRuby::ImportServicePlan
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::ImportServicePlan.new(portfolio_item_id: 177)
+instance = CatalogApiClientRuby::ImportServicePlan.new(portfolio_item_id: 177)
 ```
 
 

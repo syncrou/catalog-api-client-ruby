@@ -1,4 +1,4 @@
-# OpenapiClient::CollectionMetadata
+# CatalogApiClientRuby::CollectionMetadata
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::CollectionMetadata.new(count: null)
+instance = CatalogApiClientRuby::CollectionMetadata.new(count: null)
 ```
 
 

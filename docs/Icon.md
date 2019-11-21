@@ -1,4 +1,4 @@
-# OpenapiClient::Icon
+# CatalogApiClientRuby::Icon
 
 ## Properties
 
@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::Icon.new(id: null,
+instance = CatalogApiClientRuby::Icon.new(id: null,
                                  image_id: null,
                                  source_ref: null,
                                  source_id: null,

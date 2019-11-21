@@ -1,4 +1,4 @@
-# OpenapiClient::TagItem
+# CatalogApiClientRuby::TagItem
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::TagItem.new(name: architecture,
+instance = CatalogApiClientRuby::TagItem.new(name: architecture,
                                  namespace: openshift,
                                  value: null)
 ```

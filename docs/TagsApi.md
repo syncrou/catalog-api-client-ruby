@@ -1,4 +1,4 @@
-# OpenapiClient::TagsApi
+# CatalogApiClientRuby::TagsApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -23,15 +23,15 @@ Returns an array of Portfolio Item objects
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = CatalogApiClientRuby::TagsApi.new
 id = 'id_example' # String | ID of the resource
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
@@ -43,7 +43,7 @@ begin
   #List Portfolio Items for Tag
   result = api_instance.list_tag_portfolio_items(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TagsApi->list_tag_portfolio_items: #{e}"
 end
 ```
@@ -84,15 +84,15 @@ Returns an array of Portfolio objects
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = CatalogApiClientRuby::TagsApi.new
 id = 'id_example' # String | ID of the resource
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
@@ -104,7 +104,7 @@ begin
   #List Portfolios for Tag
   result = api_instance.list_tag_portfolios(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TagsApi->list_tag_portfolios: #{e}"
 end
 ```
@@ -145,21 +145,21 @@ List Tags
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = CatalogApiClientRuby::TagsApi.new
 
 begin
   #List Tags
   result = api_instance.list_tags
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TagsApi->list_tags: #{e}"
 end
 ```
@@ -194,22 +194,22 @@ Show a specific Tag
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::TagsApi.new
+api_instance = CatalogApiClientRuby::TagsApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Show Tag
   result = api_instance.show_tag(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling TagsApi->show_tag: #{e}"
 end
 ```

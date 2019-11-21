@@ -1,4 +1,4 @@
-# OpenapiClient::RestoreKey
+# CatalogApiClientRuby::RestoreKey
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::RestoreKey.new(restore_key: 3c1d765c1453916143e517bfc27b57ace3da693c)
+instance = CatalogApiClientRuby::RestoreKey.new(restore_key: 3c1d765c1453916143e517bfc27b57ace3da693c)
 ```
 
 

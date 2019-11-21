@@ -1,4 +1,4 @@
-# OpenapiClient::PortfoliosCollection
+# CatalogApiClientRuby::PortfoliosCollection
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::PortfoliosCollection.new(meta: null,
+instance = CatalogApiClientRuby::PortfoliosCollection.new(meta: null,
                                  links: null,
                                  data: null)
 ```

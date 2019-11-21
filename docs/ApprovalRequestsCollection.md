@@ -1,4 +1,4 @@
-# OpenapiClient::ApprovalRequestsCollection
+# CatalogApiClientRuby::ApprovalRequestsCollection
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::ApprovalRequestsCollection.new(meta: null,
+instance = CatalogApiClientRuby::ApprovalRequestsCollection.new(meta: null,
                                  links: null,
                                  data: null)
 ```

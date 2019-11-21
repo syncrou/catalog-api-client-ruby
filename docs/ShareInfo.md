@@ -1,4 +1,4 @@
-# OpenapiClient::ShareInfo
+# CatalogApiClientRuby::ShareInfo
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::ShareInfo.new(group_uuid: null,
+instance = CatalogApiClientRuby::ShareInfo.new(group_uuid: null,
                                  group_name: null,
                                  permissions: null)
 ```

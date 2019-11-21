@@ -1,4 +1,4 @@
-# OpenapiClient::PatchModifiedServicePlan
+# CatalogApiClientRuby::PatchModifiedServicePlan
 
 ## Properties
 
@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::PatchModifiedServicePlan.new(modified: {&quot;$ref&quot;:&quot;#/components/schemas/DataDrivenFormSchema&quot;})
+instance = CatalogApiClientRuby::PatchModifiedServicePlan.new(modified: {&quot;$ref&quot;:&quot;#/components/schemas/DataDrivenFormSchema&quot;})
 ```
 
 

@@ -1,4 +1,4 @@
-# OpenapiClient::Tag
+# CatalogApiClientRuby::Tag
 
 ## Properties
 
@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::Tag.new(id: null,
+instance = CatalogApiClientRuby::Tag.new(id: null,
                                  created_at: null,
                                  description: Instruction set architecture,
                                  name: architecture,

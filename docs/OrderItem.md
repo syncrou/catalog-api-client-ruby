@@ -1,4 +1,4 @@
-# OpenapiClient::OrderItem
+# CatalogApiClientRuby::OrderItem
 
 ## Properties
 
@@ -23,9 +23,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::OrderItem.new(id: null,
+instance = CatalogApiClientRuby::OrderItem.new(id: null,
                                  count: null,
                                  service_parameters: null,
                                  provider_control_parameters: null,

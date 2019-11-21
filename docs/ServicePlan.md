@@ -1,4 +1,4 @@
-# OpenapiClient::ServicePlan
+# CatalogApiClientRuby::ServicePlan
 
 ## Properties
 
@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::ServicePlan.new(name: null,
+instance = CatalogApiClientRuby::ServicePlan.new(name: null,
                                  description: null,
                                  create_json_schema: null,
                                  portfolio_item_id: null,

@@ -1,4 +1,4 @@
-# OpenapiClient::SettingsApi
+# CatalogApiClientRuby::SettingsApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -24,21 +24,21 @@ Create Tenant Setting
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::SettingsApi.new
-setting = OpenapiClient::Setting.new # Setting | Json encoded key/value pair to create a new setting
+api_instance = CatalogApiClientRuby::SettingsApi.new
+setting = CatalogApiClientRuby::Setting.new # Setting | Json encoded key/value pair to create a new setting
 
 begin
   #Create Tenant Setting
   api_instance.create_setting(setting)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling SettingsApi->create_setting: #{e}"
 end
 ```
@@ -76,21 +76,21 @@ Delete a Tenant Setting
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::SettingsApi.new
+api_instance = CatalogApiClientRuby::SettingsApi.new
 name = 'name_example' # String | name of the setting
 
 begin
   #Delete a Tenant Setting
   api_instance.destroy_setting(name)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling SettingsApi->destroy_setting: #{e}"
 end
 ```
@@ -128,21 +128,21 @@ List Tenant Settings
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::SettingsApi.new
+api_instance = CatalogApiClientRuby::SettingsApi.new
 
 begin
   #List Tenant Settings
   result = api_instance.list_settings
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling SettingsApi->list_settings: #{e}"
 end
 ```
@@ -177,21 +177,21 @@ Get a specific Tenant Setting
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::SettingsApi.new
+api_instance = CatalogApiClientRuby::SettingsApi.new
 name = 'name_example' # String | name of the setting
 
 begin
   #Get a specific Tenant Setting
   api_instance.show_setting(name)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling SettingsApi->show_setting: #{e}"
 end
 ```
@@ -229,21 +229,21 @@ Update a Tenant Setting
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::SettingsApi.new
+api_instance = CatalogApiClientRuby::SettingsApi.new
 name = 'name_example' # String | name of the setting
 
 begin
   #Update a Tenant Setting
   api_instance.update_setting(name)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling SettingsApi->update_setting: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# OpenapiClient::PortfolioApi
+# CatalogApiClientRuby::PortfolioApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -35,23 +35,23 @@ Adds a single tag to a Portfolio Item object
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = OpenapiClient::TagItem.new # TagItem | 
+tag_item = CatalogApiClientRuby::TagItem.new # TagItem | 
 
 begin
   #Add Tag for Portfolio Item
   result = api_instance.add_portfolio_item_tag(id, tag_item)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->add_portfolio_item_tag: #{e}"
 end
 ```
@@ -90,22 +90,22 @@ Adds a new portfolio item to an existing portfolio.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
-add_portfolio_item = OpenapiClient::AddPortfolioItem.new # AddPortfolioItem | 
+add_portfolio_item = CatalogApiClientRuby::AddPortfolioItem.new # AddPortfolioItem | 
 
 begin
   #Add a portfolio item to a portfolio
   api_instance.add_portfolio_item_to_portfolio(portfolio_id, add_portfolio_item)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->add_portfolio_item_to_portfolio: #{e}"
 end
 ```
@@ -144,23 +144,23 @@ Adds a single tag to Portfolio object
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = OpenapiClient::TagItem.new # TagItem | 
+tag_item = CatalogApiClientRuby::TagItem.new # TagItem | 
 
 begin
   #Add Tag for Portfolio
   result = api_instance.add_portfolio_tag(id, tag_item)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->add_portfolio_tag: #{e}"
 end
 ```
@@ -199,22 +199,22 @@ Adds a portfolio.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
-portfolio = OpenapiClient::Portfolio.new # Portfolio | Parameters needed to add a Portfolio
+api_instance = CatalogApiClientRuby::PortfolioApi.new
+portfolio = CatalogApiClientRuby::Portfolio.new # Portfolio | Parameters needed to add a Portfolio
 
 begin
   #Add a new portfolio
   result = api_instance.create_portfolio(portfolio)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->create_portfolio: #{e}"
 end
 ```
@@ -252,22 +252,22 @@ Deletes the portfolio specified by the ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Delete an existing portfolio
   result = api_instance.destroy_portfolio(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->destroy_portfolio: #{e}"
 end
 ```
@@ -305,15 +305,15 @@ Gets all portfilio items in the portfolio specified by the given ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
@@ -325,7 +325,7 @@ begin
   #Get all portfolio items from a specific portfolio
   result = api_instance.fetch_portfolio_items_with_portfolio(portfolio_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->fetch_portfolio_items_with_portfolio: #{e}"
 end
 ```
@@ -366,15 +366,15 @@ Returns an array of Tag objects
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
@@ -386,7 +386,7 @@ begin
   #List Tags for Portfolio
   result = api_instance.list_portfolio_tags(id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->list_portfolio_tags: #{e}"
 end
 ```
@@ -427,15 +427,15 @@ Gets a list of portfolios.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
   offset: 0, # Integer | The number of items to skip before starting to collect the result set.
@@ -446,7 +446,7 @@ begin
   #List portfolios
   result = api_instance.list_portfolios(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->list_portfolios: #{e}"
 end
 ```
@@ -486,22 +486,22 @@ Make a copy of the Portfolio.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
 
 begin
   #Make a copy of the Portfolio
   result = api_instance.post_copy_portfolio(portfolio_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->post_copy_portfolio: #{e}"
 end
 ```
@@ -539,22 +539,22 @@ Fetch share information about a portfolio
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
 
 begin
   #Fetch share information about this portfolio, the response would include a collection of groups and permissions with each group
   result = api_instance.share_info(portfolio_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->share_info: #{e}"
 end
 ```
@@ -592,22 +592,22 @@ Share a Portfolio with one or more groups with specific permissions
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
-share_policy = OpenapiClient::SharePolicy.new # SharePolicy | 
+share_policy = CatalogApiClientRuby::SharePolicy.new # SharePolicy | 
 
 begin
   #Share a portfolio with one or more groups with specific permission
   api_instance.share_portfolio(portfolio_id, share_policy)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->share_portfolio: #{e}"
 end
 ```
@@ -646,22 +646,22 @@ Gets the portfolio specified by the portfolio ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Get a specific portfolio
   result = api_instance.show_portfolio(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->show_portfolio: #{e}"
 end
 ```
@@ -699,21 +699,21 @@ Fetch the specified portfolio's icon image.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
 
 begin
   #Fetches the specified portfolio's icon image
   api_instance.show_portfolio_icon(portfolio_id)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->show_portfolio_icon: #{e}"
 end
 ```
@@ -751,23 +751,23 @@ Undeletes the portfolio specified by the portfolio ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-restore_key = OpenapiClient::RestoreKey.new # RestoreKey | 
+restore_key = CatalogApiClientRuby::RestoreKey.new # RestoreKey | 
 
 begin
   #Undelete specific portfolio
   result = api_instance.un_delete_portfolio(id, restore_key)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->un_delete_portfolio: #{e}"
 end
 ```
@@ -806,22 +806,22 @@ Unshare a Portfolio with one or more groups with specific permissions
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
-unshare_policy = OpenapiClient::UnsharePolicy.new # UnsharePolicy | 
+unshare_policy = CatalogApiClientRuby::UnsharePolicy.new # UnsharePolicy | 
 
 begin
   #Unshare a portfolio from one or more groups with specific permission
   api_instance.unshare_portfolio(portfolio_id, unshare_policy)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->unshare_portfolio: #{e}"
 end
 ```
@@ -860,23 +860,23 @@ Returns the edited portfolio.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::PortfolioApi.new
+api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-portfolio = OpenapiClient::Portfolio.new # Portfolio | Parameters needed to update a Portfolio
+portfolio = CatalogApiClientRuby::Portfolio.new # Portfolio | Parameters needed to update a Portfolio
 
 begin
   #Edit an existing portfolio
   result = api_instance.update_portfolio(id, portfolio)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->update_portfolio: #{e}"
 end
 ```

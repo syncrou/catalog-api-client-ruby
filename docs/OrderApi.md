@@ -1,4 +1,4 @@
-# OpenapiClient::OrderApi
+# CatalogApiClientRuby::OrderApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -29,23 +29,23 @@ Adds an order item to an order in pending state
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 order_id = 'order_id_example' # String | The Order ID
-order_item = OpenapiClient::OrderItem.new # OrderItem | 
+order_item = CatalogApiClientRuby::OrderItem.new # OrderItem | 
 
 begin
   #Add an order item to an order in pending state
   result = api_instance.add_to_order(order_id, order_item)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->add_to_order: #{e}"
 end
 ```
@@ -84,22 +84,22 @@ Returns an updated order.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 order_id = 'order_id_example' # String | The Order ID
 
 begin
   #Cancels a given order
   result = api_instance.cancel_order(order_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->cancel_order: #{e}"
 end
 ```
@@ -137,21 +137,21 @@ Creates a new order.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 
 begin
   #Create a new order
   result = api_instance.create_order
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->create_order: #{e}"
 end
 ```
@@ -186,22 +186,22 @@ Deletes the Order based on order ID passed
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Delete an existing Order
   result = api_instance.destroy_order(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->destroy_order: #{e}"
 end
 ```
@@ -239,15 +239,15 @@ Gets a list of items associated with an order.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 order_id = 'order_id_example' # String | The Order ID
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
@@ -259,7 +259,7 @@ begin
   #Gets a list of items in a given order
   result = api_instance.list_order_items_from_order(order_id, opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->list_order_items_from_order: #{e}"
 end
 ```
@@ -300,15 +300,15 @@ Gets a list of orders associated with the logged in user.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 opts = {
   limit: 100, # Integer | The numbers of items to return per page.
   offset: 0, # Integer | The number of items to skip before starting to collect the result set.
@@ -319,7 +319,7 @@ begin
   #Get a list of orders
   result = api_instance.list_orders(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->list_orders: #{e}"
 end
 ```
@@ -359,23 +359,23 @@ Restores the order specified by the order ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 id = 'id_example' # String | ID of the resource
-restore_key = OpenapiClient::RestoreKey.new # RestoreKey | 
+restore_key = CatalogApiClientRuby::RestoreKey.new # RestoreKey | 
 
 begin
   #Restore specific Order
   result = api_instance.restore_order(id, restore_key)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->restore_order: #{e}"
 end
 ```
@@ -414,22 +414,22 @@ Get a specific order based on the order ID
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Get a specific order
   result = api_instance.show_order(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->show_order: #{e}"
 end
 ```
@@ -467,15 +467,15 @@ Gets an order item associated with an order.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 order_id = 'order_id_example' # String | The Order ID
 id = 'id_example' # String | ID of the resource
 
@@ -483,7 +483,7 @@ begin
   #Gets an individual order item from a given order
   result = api_instance.show_order_item_from_order(order_id, id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->show_order_item_from_order: #{e}"
 end
 ```
@@ -522,22 +522,22 @@ Returns an updated order.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::OrderApi.new
+api_instance = CatalogApiClientRuby::OrderApi.new
 order_id = 'order_id_example' # String | The Order ID
 
 begin
   #Submit a given order
   result = api_instance.submit_order(order_id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling OrderApi->submit_order: #{e}"
 end
 ```

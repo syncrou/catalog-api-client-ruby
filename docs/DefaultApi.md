@@ -1,4 +1,4 @@
-# OpenapiClient::DefaultApi
+# CatalogApiClientRuby::DefaultApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -19,20 +19,20 @@ Return this API document in JSON format
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::DefaultApi.new
+api_instance = CatalogApiClientRuby::DefaultApi.new
 
 begin
   #Return this API document in JSON format
   api_instance.get_documentation
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling DefaultApi->get_documentation: #{e}"
 end
 ```
@@ -67,22 +67,22 @@ Performs a GraphQL Query
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::DefaultApi.new
-graph_ql_request = OpenapiClient::GraphQLRequest.new # GraphQLRequest | GraphQL Query Request
+api_instance = CatalogApiClientRuby::DefaultApi.new
+graph_ql_request = CatalogApiClientRuby::GraphQLRequest.new # GraphQLRequest | GraphQL Query Request
 
 begin
   #Perform a GraphQL Query
   result = api_instance.post_graph_ql(graph_ql_request)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling DefaultApi->post_graph_ql: #{e}"
 end
 ```

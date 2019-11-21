@@ -1,4 +1,4 @@
-# OpenapiClient::TenantsCollection
+# CatalogApiClientRuby::TenantsCollection
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::TenantsCollection.new(meta: null,
+instance = CatalogApiClientRuby::TenantsCollection.new(meta: null,
                                  links: null,
                                  data: null)
 ```

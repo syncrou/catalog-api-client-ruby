@@ -1,4 +1,4 @@
-# OpenapiClient::GraphQLRequest
+# CatalogApiClientRuby::GraphQLRequest
 
 ## Properties
 
@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'CatalogApiClientRuby'
 
-instance = OpenapiClient::GraphQLRequest.new(query: null,
+instance = CatalogApiClientRuby::GraphQLRequest.new(query: null,
                                  operation_name: null,
                                  variables: null)
 ```

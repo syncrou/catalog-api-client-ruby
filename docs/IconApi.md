@@ -1,4 +1,4 @@
-# OpenapiClient::IconApi
+# CatalogApiClientRuby::IconApi
 
 All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
@@ -24,15 +24,15 @@ Creates an Icon from the specified parameters
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::IconApi.new
+api_instance = CatalogApiClientRuby::IconApi.new
 opts = {
   content: File.new('/path/to/file'), # File | The binary image contents
   portfolio_id: 'portfolio_id_example', # String | The Portfolio this Icon belongs to
@@ -43,7 +43,7 @@ begin
   #Create an Icon
   result = api_instance.create_icon(opts)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling IconApi->create_icon: #{e}"
 end
 ```
@@ -83,21 +83,21 @@ Deletes the icon based on the icon ID passed
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::IconApi.new
+api_instance = CatalogApiClientRuby::IconApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Delete an existing Icon
   api_instance.destroy_icon(id)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling IconApi->destroy_icon: #{e}"
 end
 ```
@@ -135,22 +135,22 @@ Fetch an Icon by ID
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::IconApi.new
+api_instance = CatalogApiClientRuby::IconApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Fetch an Icon by ID
   result = api_instance.get_icon(id)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling IconApi->get_icon: #{e}"
 end
 ```
@@ -188,21 +188,21 @@ Fetch the specified portfolio item's icon image.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::IconApi.new
+api_instance = CatalogApiClientRuby::IconApi.new
 id = 'id_example' # String | ID of the resource
 
 begin
   #Fetches the specified icon's image
   api_instance.show_icon_data(id)
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling IconApi->show_icon_data: #{e}"
 end
 ```
@@ -240,23 +240,23 @@ Edits Icon specified by the given ID.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'catalog-api-client-ruby'
 # setup authorization
-OpenapiClient.configure do |config|
+CatalogApiClientRuby.configure do |config|
   # Configure HTTP basic authorization: BasicAuth
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
 end
 
-api_instance = OpenapiClient::IconApi.new
+api_instance = CatalogApiClientRuby::IconApi.new
 id = 'id_example' # String | ID of the resource
-icon = OpenapiClient::Icon.new # Icon | Parameters needed to update an Icon
+icon = CatalogApiClientRuby::Icon.new # Icon | Parameters needed to update an Icon
 
 begin
   #Edit an existing Icon
   result = api_instance.update_icon(id, icon)
   p result
-rescue OpenapiClient::ApiError => e
+rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling IconApi->update_icon: #{e}"
 end
 ```
