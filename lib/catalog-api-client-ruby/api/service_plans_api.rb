@@ -148,6 +148,71 @@ module CatalogApiClientRuby
       return data, status_code, headers
     end
 
+    # Reset Service Plan Modified schema
+    # Resets the Service Plan's Modified schema
+    # @param id [String] ID of the resource
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def reset_service_plan_modified(id, opts = {})
+      reset_service_plan_modified_with_http_info(id, opts)
+      nil
+    end
+
+    # Reset Service Plan Modified schema
+    # Resets the Service Plan&#39;s Modified schema
+    # @param id [String] ID of the resource
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def reset_service_plan_modified_with_http_info(id, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: ServicePlansApi.reset_service_plan_modified ...'
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling ServicePlansApi.reset_service_plan_modified"
+      end
+      pattern = Regexp.new(/^\d+$/)
+      if @api_client.config.client_side_validation && id !~ pattern
+        fail ArgumentError, "invalid value for 'id' when calling ServicePlansApi.reset_service_plan_modified, must conform to the pattern #{pattern}."
+      end
+
+      # resource path
+      local_var_path = '/service_plans/{id}/reset'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] 
+
+      # return_type
+      return_type = opts[:return_type] 
+
+      # auth_names
+      auth_names = opts[:auth_names] || ['BasicAuth']
+
+      new_options = opts.merge(
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: ServicePlansApi#reset_service_plan_modified\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Show Service Plan
     # Returns the specified Service Plan
     # @param id [String] ID of the resource

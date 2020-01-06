@@ -4,6 +4,7 @@ All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**add_portfolio_item_tag**](PortfolioItemApi.md#add_portfolio_item_tag) | **POST** /portfolio_items/{id}/tag | Add Tag for Portfolio Item
 [**create_portfolio_item**](PortfolioItemApi.md#create_portfolio_item) | **POST** /portfolio_items | Add a new portfolio item
 [**destroy_portfolio_item**](PortfolioItemApi.md#destroy_portfolio_item) | **DELETE** /portfolio_items/{id} | Delete an existing portfolio item
 [**get_portfolio_item_next_name**](PortfolioItemApi.md#get_portfolio_item_next_name) | **GET** /portfolio_items/{portfolio_item_id}/next_name | Get the next name for a the Portfolio Item prior to a copy operation
@@ -12,11 +13,67 @@ Method | HTTP request | Description
 [**list_provider_control_parameters**](PortfolioItemApi.md#list_provider_control_parameters) | **GET** /portfolio_items/{portfolio_item_id}/provider_control_parameters | Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
 [**list_service_plans**](PortfolioItemApi.md#list_service_plans) | **GET** /portfolio_items/{portfolio_item_id}/service_plans | Gets all service plans for a specific portfolio item; requires a connection to the topology service.
 [**post_copy_portfolio_item**](PortfolioItemApi.md#post_copy_portfolio_item) | **POST** /portfolio_items/{portfolio_item_id}/copy | Make a copy of the Portfolio Item
+[**remove_portfolio_item_tags**](PortfolioItemApi.md#remove_portfolio_item_tags) | **POST** /portfolio_items/{id}/untag | Remove Tags from Portfolio Item
 [**show_portfolio_item**](PortfolioItemApi.md#show_portfolio_item) | **GET** /portfolio_items/{id} | Gets a specific portfolio item
 [**show_portfolio_item_icon**](PortfolioItemApi.md#show_portfolio_item_icon) | **GET** /portfolio_items/{portfolio_item_id}/icon | Fetches the specified portfolio item&#39;s icon image
 [**un_delete_portfolio_item**](PortfolioItemApi.md#un_delete_portfolio_item) | **POST** /portfolio_items/{portfolio_item_id}/undelete | Undelete a specified Portfolio Item
 [**update_portfolio_item**](PortfolioItemApi.md#update_portfolio_item) | **PATCH** /portfolio_items/{id} | Edit an existing portfolio item
 
+
+
+## add_portfolio_item_tag
+
+> Array&lt;TagItem&gt; add_portfolio_item_tag(id, tag_item)
+
+Add Tag for Portfolio Item
+
+Adds a single tag to a Portfolio Item object
+
+### Example
+
+```ruby
+# load the gem
+require 'catalog-api-client-ruby'
+# setup authorization
+CatalogApiClientRuby.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = CatalogApiClientRuby::PortfolioItemApi.new
+id = 'id_example' # String | ID of the resource
+tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+
+begin
+  #Add Tag for Portfolio Item
+  result = api_instance.add_portfolio_item_tag(id, tag_item)
+  p result
+rescue CatalogApiClientRuby::ApiError => e
+  puts "Exception when calling PortfolioItemApi->add_portfolio_item_tag: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ID of the resource | 
+ **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+
+### Return type
+
+[**Array&lt;TagItem&gt;**](TagItem.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## create_portfolio_item
@@ -463,6 +520,60 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## remove_portfolio_item_tags
+
+> remove_portfolio_item_tags(id, tag_item)
+
+Remove Tags from Portfolio Item
+
+Remove Tags from Portfolio Item
+
+### Example
+
+```ruby
+# load the gem
+require 'catalog-api-client-ruby'
+# setup authorization
+CatalogApiClientRuby.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = CatalogApiClientRuby::PortfolioItemApi.new
+id = 'id_example' # String | ID of the resource
+tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+
+begin
+  #Remove Tags from Portfolio Item
+  api_instance.remove_portfolio_item_tags(id, tag_item)
+rescue CatalogApiClientRuby::ApiError => e
+  puts "Exception when calling PortfolioItemApi->remove_portfolio_item_tags: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ID of the resource | 
+ **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 
 ## show_portfolio_item

@@ -19,81 +19,6 @@ module CatalogApiClientRuby
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Add Tag for Portfolio Item
-    # Adds a single tag to a Portfolio Item object
-    # @param id [String] ID of the resource
-    # @param tag_item [TagItem] 
-    # @param [Hash] opts the optional parameters
-    # @return [Tag]
-    def add_portfolio_item_tag(id, tag_item, opts = {})
-      data, _status_code, _headers = add_portfolio_item_tag_with_http_info(id, tag_item, opts)
-      data
-    end
-
-    # Add Tag for Portfolio Item
-    # Adds a single tag to a Portfolio Item object
-    # @param id [String] ID of the resource
-    # @param tag_item [TagItem] 
-    # @param [Hash] opts the optional parameters
-    # @return [Array<(Tag, Integer, Hash)>] Tag data, response status code and response headers
-    def add_portfolio_item_tag_with_http_info(id, tag_item, opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: PortfolioApi.add_portfolio_item_tag ...'
-      end
-      # verify the required parameter 'id' is set
-      if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling PortfolioApi.add_portfolio_item_tag"
-      end
-      pattern = Regexp.new(/^\d+$/)
-      if @api_client.config.client_side_validation && id !~ pattern
-        fail ArgumentError, "invalid value for 'id' when calling PortfolioApi.add_portfolio_item_tag, must conform to the pattern #{pattern}."
-      end
-
-      # verify the required parameter 'tag_item' is set
-      if @api_client.config.client_side_validation && tag_item.nil?
-        fail ArgumentError, "Missing the required parameter 'tag_item' when calling PortfolioApi.add_portfolio_item_tag"
-      end
-      # resource path
-      local_var_path = '/portfolio_items/{id}/tags'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      # HTTP header 'Content-Type'
-      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:body] || @api_client.object_to_http_body(tag_item) 
-
-      # return_type
-      return_type = opts[:return_type] || 'Tag' 
-
-      # auth_names
-      auth_names = opts[:auth_names] || ['BasicAuth']
-
-      new_options = opts.merge(
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: PortfolioApi#add_portfolio_item_tag\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Add a portfolio item to a portfolio
     # Adds a new portfolio item to an existing portfolio.
     # @param portfolio_id [String] The Portfolio ID
@@ -170,9 +95,9 @@ module CatalogApiClientRuby
     # Add Tag for Portfolio
     # Adds a single tag to Portfolio object
     # @param id [String] ID of the resource
-    # @param tag_item [TagItem] 
+    # @param tag_item [Array<TagItem>] 
     # @param [Hash] opts the optional parameters
-    # @return [Tag]
+    # @return [Array<TagItem>]
     def add_portfolio_tag(id, tag_item, opts = {})
       data, _status_code, _headers = add_portfolio_tag_with_http_info(id, tag_item, opts)
       data
@@ -181,9 +106,9 @@ module CatalogApiClientRuby
     # Add Tag for Portfolio
     # Adds a single tag to Portfolio object
     # @param id [String] ID of the resource
-    # @param tag_item [TagItem] 
+    # @param tag_item [Array<TagItem>] 
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Tag, Integer, Hash)>] Tag data, response status code and response headers
+    # @return [Array<(Array<TagItem>, Integer, Hash)>] Array<TagItem> data, response status code and response headers
     def add_portfolio_tag_with_http_info(id, tag_item, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: PortfolioApi.add_portfolio_tag ...'
@@ -202,7 +127,7 @@ module CatalogApiClientRuby
         fail ArgumentError, "Missing the required parameter 'tag_item' when calling PortfolioApi.add_portfolio_tag"
       end
       # resource path
-      local_var_path = '/portfolios/{id}/tags'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
+      local_var_path = '/portfolios/{id}/tag'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -221,7 +146,7 @@ module CatalogApiClientRuby
       post_body = opts[:body] || @api_client.object_to_http_body(tag_item) 
 
       # return_type
-      return_type = opts[:return_type] || 'Tag' 
+      return_type = opts[:return_type] || 'Array<TagItem>' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['BasicAuth']
@@ -689,6 +614,79 @@ module CatalogApiClientRuby
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: PortfolioApi#post_copy_portfolio\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # Remove Tags from Portfolio
+    # Remove Tags from Portfolio
+    # @param id [String] ID of the resource
+    # @param tag_item [Array<TagItem>] 
+    # @param [Hash] opts the optional parameters
+    # @return [nil]
+    def remove_portfolio_tags(id, tag_item, opts = {})
+      remove_portfolio_tags_with_http_info(id, tag_item, opts)
+      nil
+    end
+
+    # Remove Tags from Portfolio
+    # Remove Tags from Portfolio
+    # @param id [String] ID of the resource
+    # @param tag_item [Array<TagItem>] 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
+    def remove_portfolio_tags_with_http_info(id, tag_item, opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PortfolioApi.remove_portfolio_tags ...'
+      end
+      # verify the required parameter 'id' is set
+      if @api_client.config.client_side_validation && id.nil?
+        fail ArgumentError, "Missing the required parameter 'id' when calling PortfolioApi.remove_portfolio_tags"
+      end
+      pattern = Regexp.new(/^\d+$/)
+      if @api_client.config.client_side_validation && id !~ pattern
+        fail ArgumentError, "invalid value for 'id' when calling PortfolioApi.remove_portfolio_tags, must conform to the pattern #{pattern}."
+      end
+
+      # verify the required parameter 'tag_item' is set
+      if @api_client.config.client_side_validation && tag_item.nil?
+        fail ArgumentError, "Missing the required parameter 'tag_item' when calling PortfolioApi.remove_portfolio_tags"
+      end
+      # resource path
+      local_var_path = '/portfolios/{id}/untag'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Content-Type'
+      header_params['Content-Type'] = @api_client.select_header_content_type(['application/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:body] || @api_client.object_to_http_body(tag_item) 
+
+      # return_type
+      return_type = opts[:return_type] 
+
+      # auth_names
+      auth_names = opts[:auth_names] || ['BasicAuth']
+
+      new_options = opts.merge(
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PortfolioApi#remove_portfolio_tags\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

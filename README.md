@@ -103,15 +103,15 @@ Class | Method | HTTP request | Description
 *CatalogApiClientRuby::OrderItemApi* | [**list_progress_messages**](docs/OrderItemApi.md#list_progress_messages) | **GET** /order_items/{order_item_id}/progress_messages | Gets a list of progress messages in an item
 *CatalogApiClientRuby::OrderItemApi* | [**restore_order_item**](docs/OrderItemApi.md#restore_order_item) | **POST** /order_items/{id}/restore | Restore specific Order item
 *CatalogApiClientRuby::OrderItemApi* | [**show_order_item**](docs/OrderItemApi.md#show_order_item) | **GET** /order_items/{id} | Gets a specific order item
-*CatalogApiClientRuby::PortfolioApi* | [**add_portfolio_item_tag**](docs/PortfolioApi.md#add_portfolio_item_tag) | **POST** /portfolio_items/{id}/tags | Add Tag for Portfolio Item
 *CatalogApiClientRuby::PortfolioApi* | [**add_portfolio_item_to_portfolio**](docs/PortfolioApi.md#add_portfolio_item_to_portfolio) | **POST** /portfolios/{portfolio_id}/portfolio_items | Add a portfolio item to a portfolio
-*CatalogApiClientRuby::PortfolioApi* | [**add_portfolio_tag**](docs/PortfolioApi.md#add_portfolio_tag) | **POST** /portfolios/{id}/tags | Add Tag for Portfolio
+*CatalogApiClientRuby::PortfolioApi* | [**add_portfolio_tag**](docs/PortfolioApi.md#add_portfolio_tag) | **POST** /portfolios/{id}/tag | Add Tag for Portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**create_portfolio**](docs/PortfolioApi.md#create_portfolio) | **POST** /portfolios | Add a new portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**destroy_portfolio**](docs/PortfolioApi.md#destroy_portfolio) | **DELETE** /portfolios/{id} | Delete an existing portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**fetch_portfolio_items_with_portfolio**](docs/PortfolioApi.md#fetch_portfolio_items_with_portfolio) | **GET** /portfolios/{portfolio_id}/portfolio_items | Get all portfolio items from a specific portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**list_portfolio_tags**](docs/PortfolioApi.md#list_portfolio_tags) | **GET** /portfolios/{id}/tags | List Tags for Portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**list_portfolios**](docs/PortfolioApi.md#list_portfolios) | **GET** /portfolios | List portfolios
 *CatalogApiClientRuby::PortfolioApi* | [**post_copy_portfolio**](docs/PortfolioApi.md#post_copy_portfolio) | **POST** /portfolios/{portfolio_id}/copy | Make a copy of the Portfolio
+*CatalogApiClientRuby::PortfolioApi* | [**remove_portfolio_tags**](docs/PortfolioApi.md#remove_portfolio_tags) | **POST** /portfolios/{id}/untag | Remove Tags from Portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**share_info**](docs/PortfolioApi.md#share_info) | **GET** /portfolios/{portfolio_id}/share_info | Fetch share information about this portfolio, the response would include a collection of groups and permissions with each group
 *CatalogApiClientRuby::PortfolioApi* | [**share_portfolio**](docs/PortfolioApi.md#share_portfolio) | **POST** /portfolios/{portfolio_id}/share | Share a portfolio with one or more groups with specific permission
 *CatalogApiClientRuby::PortfolioApi* | [**show_portfolio**](docs/PortfolioApi.md#show_portfolio) | **GET** /portfolios/{id} | Get a specific portfolio
@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *CatalogApiClientRuby::PortfolioApi* | [**un_delete_portfolio**](docs/PortfolioApi.md#un_delete_portfolio) | **POST** /portfolios/{id}/undelete | Undelete specific portfolio
 *CatalogApiClientRuby::PortfolioApi* | [**unshare_portfolio**](docs/PortfolioApi.md#unshare_portfolio) | **POST** /portfolios/{portfolio_id}/unshare | Unshare a portfolio from one or more groups with specific permission
 *CatalogApiClientRuby::PortfolioApi* | [**update_portfolio**](docs/PortfolioApi.md#update_portfolio) | **PATCH** /portfolios/{id} | Edit an existing portfolio
+*CatalogApiClientRuby::PortfolioItemApi* | [**add_portfolio_item_tag**](docs/PortfolioItemApi.md#add_portfolio_item_tag) | **POST** /portfolio_items/{id}/tag | Add Tag for Portfolio Item
 *CatalogApiClientRuby::PortfolioItemApi* | [**create_portfolio_item**](docs/PortfolioItemApi.md#create_portfolio_item) | **POST** /portfolio_items | Add a new portfolio item
 *CatalogApiClientRuby::PortfolioItemApi* | [**destroy_portfolio_item**](docs/PortfolioItemApi.md#destroy_portfolio_item) | **DELETE** /portfolio_items/{id} | Delete an existing portfolio item
 *CatalogApiClientRuby::PortfolioItemApi* | [**get_portfolio_item_next_name**](docs/PortfolioItemApi.md#get_portfolio_item_next_name) | **GET** /portfolio_items/{portfolio_item_id}/next_name | Get the next name for a the Portfolio Item prior to a copy operation
@@ -127,12 +128,14 @@ Class | Method | HTTP request | Description
 *CatalogApiClientRuby::PortfolioItemApi* | [**list_provider_control_parameters**](docs/PortfolioItemApi.md#list_provider_control_parameters) | **GET** /portfolio_items/{portfolio_item_id}/provider_control_parameters | Gets the provider control parameters for this portfolio item; requires control paramaters provided when provisioning the portfolio item.
 *CatalogApiClientRuby::PortfolioItemApi* | [**list_service_plans**](docs/PortfolioItemApi.md#list_service_plans) | **GET** /portfolio_items/{portfolio_item_id}/service_plans | Gets all service plans for a specific portfolio item; requires a connection to the topology service.
 *CatalogApiClientRuby::PortfolioItemApi* | [**post_copy_portfolio_item**](docs/PortfolioItemApi.md#post_copy_portfolio_item) | **POST** /portfolio_items/{portfolio_item_id}/copy | Make a copy of the Portfolio Item
+*CatalogApiClientRuby::PortfolioItemApi* | [**remove_portfolio_item_tags**](docs/PortfolioItemApi.md#remove_portfolio_item_tags) | **POST** /portfolio_items/{id}/untag | Remove Tags from Portfolio Item
 *CatalogApiClientRuby::PortfolioItemApi* | [**show_portfolio_item**](docs/PortfolioItemApi.md#show_portfolio_item) | **GET** /portfolio_items/{id} | Gets a specific portfolio item
 *CatalogApiClientRuby::PortfolioItemApi* | [**show_portfolio_item_icon**](docs/PortfolioItemApi.md#show_portfolio_item_icon) | **GET** /portfolio_items/{portfolio_item_id}/icon | Fetches the specified portfolio item's icon image
 *CatalogApiClientRuby::PortfolioItemApi* | [**un_delete_portfolio_item**](docs/PortfolioItemApi.md#un_delete_portfolio_item) | **POST** /portfolio_items/{portfolio_item_id}/undelete | Undelete a specified Portfolio Item
 *CatalogApiClientRuby::PortfolioItemApi* | [**update_portfolio_item**](docs/PortfolioItemApi.md#update_portfolio_item) | **PATCH** /portfolio_items/{id} | Edit an existing portfolio item
 *CatalogApiClientRuby::ServicePlansApi* | [**create_service_plan**](docs/ServicePlansApi.md#create_service_plan) | **POST** /service_plans | Create Service Plan
 *CatalogApiClientRuby::ServicePlansApi* | [**patch_service_plan_modified**](docs/ServicePlansApi.md#patch_service_plan_modified) | **PATCH** /service_plans/{id}/modified | Patch Service Plan Modified Schema
+*CatalogApiClientRuby::ServicePlansApi* | [**reset_service_plan_modified**](docs/ServicePlansApi.md#reset_service_plan_modified) | **POST** /service_plans/{id}/reset | Reset Service Plan Modified schema
 *CatalogApiClientRuby::ServicePlansApi* | [**show_service_plan**](docs/ServicePlansApi.md#show_service_plan) | **GET** /service_plans/{id} | Show Service Plan
 *CatalogApiClientRuby::ServicePlansApi* | [**show_service_plan_base**](docs/ServicePlansApi.md#show_service_plan_base) | **GET** /service_plans/{id}/base | Show Service Plan Base Schema
 *CatalogApiClientRuby::ServicePlansApi* | [**show_service_plan_modified**](docs/ServicePlansApi.md#show_service_plan_modified) | **GET** /service_plans/{id}/modified | Show Service Plan modified Schema

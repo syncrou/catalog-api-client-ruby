@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_service_plan**](ServicePlansApi.md#create_service_plan) | **POST** /service_plans | Create Service Plan
 [**patch_service_plan_modified**](ServicePlansApi.md#patch_service_plan_modified) | **PATCH** /service_plans/{id}/modified | Patch Service Plan Modified Schema
+[**reset_service_plan_modified**](ServicePlansApi.md#reset_service_plan_modified) | **POST** /service_plans/{id}/reset | Reset Service Plan Modified schema
 [**show_service_plan**](ServicePlansApi.md#show_service_plan) | **GET** /service_plans/{id} | Show Service Plan
 [**show_service_plan_base**](ServicePlansApi.md#show_service_plan_base) | **GET** /service_plans/{id}/base | Show Service Plan Base Schema
 [**show_service_plan_modified**](ServicePlansApi.md#show_service_plan_modified) | **GET** /service_plans/{id}/modified | Show Service Plan modified Schema
@@ -120,6 +121,58 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
+
+
+## reset_service_plan_modified
+
+> reset_service_plan_modified(id)
+
+Reset Service Plan Modified schema
+
+Resets the Service Plan's Modified schema
+
+### Example
+
+```ruby
+# load the gem
+require 'catalog-api-client-ruby'
+# setup authorization
+CatalogApiClientRuby.configure do |config|
+  # Configure HTTP basic authorization: BasicAuth
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
+
+api_instance = CatalogApiClientRuby::ServicePlansApi.new
+id = 'id_example' # String | ID of the resource
+
+begin
+  #Reset Service Plan Modified schema
+  api_instance.reset_service_plan_modified(id)
+rescue CatalogApiClientRuby::ApiError => e
+  puts "Exception when calling ServicePlansApi->reset_service_plan_modified: #{e}"
+end
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| ID of the resource | 
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 
 ## show_service_plan

@@ -119,6 +119,9 @@ module CatalogApiClientRuby
     # List of attributes with nullable: true
     def self.openapi_nullable
       Set.new([
+        :'service_parameters',
+        :'provider_control_parameters',
+        :'service_plan_ref',
       ])
     end
 
@@ -208,18 +211,6 @@ module CatalogApiClientRuby
         invalid_properties.push('invalid value for "count", count cannot be nil.')
       end
 
-      if @service_parameters.nil?
-        invalid_properties.push('invalid value for "service_parameters", service_parameters cannot be nil.')
-      end
-
-      if @provider_control_parameters.nil?
-        invalid_properties.push('invalid value for "provider_control_parameters", provider_control_parameters cannot be nil.')
-      end
-
-      if @service_plan_ref.nil?
-        invalid_properties.push('invalid value for "service_plan_ref", service_plan_ref cannot be nil.')
-      end
-
       if @portfolio_item_id.nil?
         invalid_properties.push('invalid value for "portfolio_item_id", portfolio_item_id cannot be nil.')
       end
@@ -231,9 +222,6 @@ module CatalogApiClientRuby
     # @return true if the model is valid
     def valid?
       return false if @count.nil?
-      return false if @service_parameters.nil?
-      return false if @provider_control_parameters.nil?
-      return false if @service_plan_ref.nil?
       return false if @portfolio_item_id.nil?
       state_validator = EnumAttributeValidator.new('String', ["Created", "Approval Pending", "Ordered", "Failed", "Completed", "Approved", "Denied"])
       return false unless state_validator.valid?(@state)

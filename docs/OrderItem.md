@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] [readonly] 
 **count** | **Integer** |  | [default to 1]
-**service_parameters** | [**Object**](.md) |  | 
-**provider_control_parameters** | [**Object**](.md) | The provider specific parameters needed to provision this service. This might include namespaces, special keys. | 
-**service_plan_ref** | **String** | Stores the service plan ref from the Topology Service. | 
+**service_parameters** | [**Object**](.md) |  | [optional] 
+**provider_control_parameters** | [**Object**](.md) | The provider specific parameters needed to provision this service. This might include namespaces, special keys. | [optional] 
+**service_plan_ref** | **String** | Stores the service plan ref from the Topology Service. | [optional] 
 **portfolio_item_id** | **String** | Stores the Portfolio Item ID. | 
 **state** | **String** | Current state of this order item. | [optional] [readonly] 
 **order_id** | **String** | The Order that the OrderItem belongs to. | [optional] 

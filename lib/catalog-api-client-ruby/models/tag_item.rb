@@ -14,27 +14,19 @@ require 'date'
 
 module CatalogApiClientRuby
   class TagItem
-    attr_accessor :name
-
-    attr_accessor :namespace
-
-    attr_accessor :value
+    attr_accessor :tag
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'name' => :'name',
-        :'namespace' => :'namespace',
-        :'value' => :'value'
+        :'tag' => :'tag'
       }
     end
 
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'name' => :'String',
-        :'namespace' => :'String',
-        :'value' => :'String'
+        :'tag' => :'String'
       }
     end
 
@@ -59,16 +51,8 @@ module CatalogApiClientRuby
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'name')
-        self.name = attributes[:'name']
-      end
-
-      if attributes.key?(:'namespace')
-        self.namespace = attributes[:'namespace']
-      end
-
-      if attributes.key?(:'value')
-        self.value = attributes[:'value']
+      if attributes.key?(:'tag')
+        self.tag = attributes[:'tag']
       end
     end
 
@@ -90,9 +74,7 @@ module CatalogApiClientRuby
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          name == o.name &&
-          namespace == o.namespace &&
-          value == o.value
+          tag == o.tag
     end
 
     # @see the `==` method
@@ -104,7 +86,7 @@ module CatalogApiClientRuby
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [name, namespace, value].hash
+      [tag].hash
     end
 
     # Builds the object from hash

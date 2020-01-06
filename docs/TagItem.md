@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] [readonly] 
-**namespace** | **String** |  | [optional] [readonly] 
-**value** | **String** |  | [optional] [readonly] 
+**tag** | **String** |  | [optional] 
 
 ## Code Sample
 
 ```ruby
 require 'CatalogApiClientRuby'
 
-instance = CatalogApiClientRuby::TagItem.new(name: architecture,
-                                 namespace: openshift,
-                                 value: null)
+instance = CatalogApiClientRuby::TagItem.new(tag: /namespace/architecture&#x3D;x86_64)
 ```
 
 
