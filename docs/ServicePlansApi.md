@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ## patch_service_plan_modified
 
-> DataDrivenFormSchema patch_service_plan_modified(id, opts)
+> Object patch_service_plan_modified(id, opts)
 
 Patch Service Plan Modified Schema
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataDrivenFormSchema**](DataDrivenFormSchema.md)
+**Object**
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## show_service_plan_base
 
-> DataDrivenFormSchema show_service_plan_base(id)
+> ServicePlan show_service_plan_base(id)
 
 Show Service Plan Base Schema
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataDrivenFormSchema**](DataDrivenFormSchema.md)
+[**ServicePlan**](ServicePlan.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ## show_service_plan_modified
 
-> DataDrivenFormSchema show_service_plan_modified(id)
+> ServicePlan show_service_plan_modified(id)
 
 Show Service Plan modified Schema
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataDrivenFormSchema**](DataDrivenFormSchema.md)
+[**ServicePlan**](ServicePlan.md)
 
 ### Authorization
 

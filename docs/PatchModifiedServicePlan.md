@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ```ruby
 require 'CatalogApiClientRuby'
 
-instance = CatalogApiClientRuby::PatchModifiedServicePlan.new(modified: {&quot;$ref&quot;:&quot;#/components/schemas/DataDrivenFormSchema&quot;})
+instance = CatalogApiClientRuby::PatchModifiedServicePlan.new(modified: null)
 ```
 
 

@@ -163,7 +163,6 @@ Class | Method | HTTP request | Description
  - [CatalogApiClientRuby::CopyPortfolioItem](docs/CopyPortfolioItem.md)
  - [CatalogApiClientRuby::CreateIcon](docs/CreateIcon.md)
  - [CatalogApiClientRuby::CreatePortfolioItem](docs/CreatePortfolioItem.md)
- - [CatalogApiClientRuby::DataDrivenFormSchema](docs/DataDrivenFormSchema.md)
  - [CatalogApiClientRuby::GraphQLRequest](docs/GraphQLRequest.md)
  - [CatalogApiClientRuby::GraphQLResponse](docs/GraphQLResponse.md)
  - [CatalogApiClientRuby::Icon](docs/Icon.md)

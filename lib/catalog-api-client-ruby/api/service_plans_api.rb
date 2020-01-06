@@ -83,7 +83,7 @@ module CatalogApiClientRuby
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
     # @option opts [PatchModifiedServicePlan] :patch_modified_service_plan 
-    # @return [DataDrivenFormSchema]
+    # @return [Object]
     def patch_service_plan_modified(id, opts = {})
       data, _status_code, _headers = patch_service_plan_modified_with_http_info(id, opts)
       data
@@ -93,7 +93,7 @@ module CatalogApiClientRuby
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
     # @option opts [PatchModifiedServicePlan] :patch_modified_service_plan 
-    # @return [Array<(DataDrivenFormSchema, Integer, Hash)>] DataDrivenFormSchema data, response status code and response headers
+    # @return [Array<(Object, Integer, Hash)>] Object data, response status code and response headers
     def patch_service_plan_modified_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServicePlansApi.patch_service_plan_modified ...'
@@ -127,7 +127,7 @@ module CatalogApiClientRuby
       post_body = opts[:body] || @api_client.object_to_http_body(opts[:'patch_modified_service_plan']) 
 
       # return_type
-      return_type = opts[:return_type] || 'DataDrivenFormSchema' 
+      return_type = opts[:return_type] || 'Object' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['BasicAuth']
@@ -284,7 +284,7 @@ module CatalogApiClientRuby
     # Returns the specified Service Plan's base schema
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
-    # @return [DataDrivenFormSchema]
+    # @return [ServicePlan]
     def show_service_plan_base(id, opts = {})
       data, _status_code, _headers = show_service_plan_base_with_http_info(id, opts)
       data
@@ -294,7 +294,7 @@ module CatalogApiClientRuby
     # Returns the specified Service Plan&#39;s base schema
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataDrivenFormSchema, Integer, Hash)>] DataDrivenFormSchema data, response status code and response headers
+    # @return [Array<(ServicePlan, Integer, Hash)>] ServicePlan data, response status code and response headers
     def show_service_plan_base_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServicePlansApi.show_service_plan_base ...'
@@ -326,7 +326,7 @@ module CatalogApiClientRuby
       post_body = opts[:body] 
 
       # return_type
-      return_type = opts[:return_type] || 'DataDrivenFormSchema' 
+      return_type = opts[:return_type] || 'ServicePlan' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['BasicAuth']
@@ -351,7 +351,7 @@ module CatalogApiClientRuby
     # Returns the specified Service Plan's modified schema
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
-    # @return [DataDrivenFormSchema]
+    # @return [ServicePlan]
     def show_service_plan_modified(id, opts = {})
       data, _status_code, _headers = show_service_plan_modified_with_http_info(id, opts)
       data
@@ -361,7 +361,7 @@ module CatalogApiClientRuby
     # Returns the specified Service Plan&#39;s modified schema
     # @param id [String] ID of the resource
     # @param [Hash] opts the optional parameters
-    # @return [Array<(DataDrivenFormSchema, Integer, Hash)>] DataDrivenFormSchema data, response status code and response headers
+    # @return [Array<(ServicePlan, Integer, Hash)>] ServicePlan data, response status code and response headers
     def show_service_plan_modified_with_http_info(id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug 'Calling API: ServicePlansApi.show_service_plan_modified ...'
@@ -393,7 +393,7 @@ module CatalogApiClientRuby
       post_body = opts[:body] 
 
       # return_type
-      return_type = opts[:return_type] || 'DataDrivenFormSchema' 
+      return_type = opts[:return_type] || 'ServicePlan' 
 
       # auth_names
       auth_names = opts[:auth_names] || ['BasicAuth']
