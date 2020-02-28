@@ -4,24 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] [readonly] 
-**created_at** | **DateTime** |  | [optional] [readonly] 
-**description** | **String** |  | [optional] [readonly] 
-**name** | **String** |  | [optional] [readonly] 
-**namespace** | **String** |  | [optional] [readonly] 
-**value** | **String** |  | [optional] [readonly] 
+**tag** | **String** |  | [optional] 
 
 ## Code Sample
 
 ```ruby
 require 'CatalogApiClientRuby'
 
-instance = CatalogApiClientRuby::Tag.new(id: null,
-                                 created_at: null,
-                                 description: Instruction set architecture,
-                                 name: architecture,
-                                 namespace: openshift,
-                                 value: null)
+instance = CatalogApiClientRuby::Tag.new(tag: /namespace/architecture&#x3D;x86_64)
 ```
 
 

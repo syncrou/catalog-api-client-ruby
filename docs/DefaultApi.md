@@ -1,6 +1,6 @@
 # CatalogApiClientRuby::DefaultApi
 
-All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
+All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## get_documentation
 
-> get_documentation
+> Object get_documentation
 
 Return this API document in JSON format
 
@@ -31,7 +31,8 @@ api_instance = CatalogApiClientRuby::DefaultApi.new
 
 begin
   #Return this API document in JSON format
-  api_instance.get_documentation
+  result = api_instance.get_documentation
+  p result
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling DefaultApi->get_documentation: #{e}"
 end
@@ -43,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-nil (empty response body)
+**Object**
 
 ### Authorization
 
@@ -52,7 +53,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## post_graph_ql

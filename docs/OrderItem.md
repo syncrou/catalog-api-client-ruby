@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **count** | **Integer** |  | [default to 1]
 **service_parameters** | [**Object**](.md) |  | [optional] 
 **provider_control_parameters** | [**Object**](.md) | The provider specific parameters needed to provision this service. This might include namespaces, special keys. | [optional] 
-**service_plan_ref** | **String** | Stores the service plan ref from the Topology Service. | [optional] 
 **portfolio_item_id** | **String** | Stores the Portfolio Item ID. | 
 **state** | **String** | Current state of this order item. | [optional] [readonly] 
 **order_id** | **String** | The Order that the OrderItem belongs to. | [optional] 
@@ -29,7 +28,6 @@ instance = CatalogApiClientRuby::OrderItem.new(id: null,
                                  count: null,
                                  service_parameters: null,
                                  provider_control_parameters: null,
-                                 service_plan_ref: null,
                                  portfolio_item_id: null,
                                  state: null,
                                  order_id: null,

@@ -1,6 +1,6 @@
 # CatalogApiClientRuby::PortfolioItemApi
 
-All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
+All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 ## add_portfolio_item_tag
 
-> Array&lt;TagItem&gt; add_portfolio_item_tag(id, tag_item)
+> Array&lt;Tag&gt; add_portfolio_item_tag(id, tag)
 
 Add Tag for Portfolio Item
 
@@ -43,11 +43,11 @@ end
 
 api_instance = CatalogApiClientRuby::PortfolioItemApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+tag = [CatalogApiClientRuby::Tag.new] # Array<Tag> | 
 
 begin
   #Add Tag for Portfolio Item
-  result = api_instance.add_portfolio_item_tag(id, tag_item)
+  result = api_instance.add_portfolio_item_tag(id, tag)
   p result
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioItemApi->add_portfolio_item_tag: #{e}"
@@ -60,11 +60,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ID of the resource | 
- **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+ **tag** | [**Array&lt;Tag&gt;**](Tag.md)|  | 
 
 ### Return type
 
-[**Array&lt;TagItem&gt;**](TagItem.md)
+[**Array&lt;Tag&gt;**](Tag.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ## remove_portfolio_item_tags
 
-> remove_portfolio_item_tags(id, tag_item)
+> remove_portfolio_item_tags(id, tag)
 
 Remove Tags from Portfolio Item
 
@@ -544,11 +544,11 @@ end
 
 api_instance = CatalogApiClientRuby::PortfolioItemApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+tag = [CatalogApiClientRuby::Tag.new] # Array<Tag> | 
 
 begin
   #Remove Tags from Portfolio Item
-  api_instance.remove_portfolio_item_tags(id, tag_item)
+  api_instance.remove_portfolio_item_tags(id, tag)
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioItemApi->remove_portfolio_item_tags: #{e}"
 end
@@ -560,7 +560,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ID of the resource | 
- **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+ **tag** | [**Array&lt;Tag&gt;**](Tag.md)|  | 
 
 ### Return type
 
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 
 ## show_portfolio_item_icon
 
-> show_portfolio_item_icon(portfolio_item_id)
+> File show_portfolio_item_icon(portfolio_item_id)
 
 Fetches the specified portfolio item's icon image
 
@@ -654,7 +654,8 @@ portfolio_item_id = 'portfolio_item_id_example' # String | The Portfolio Item ID
 
 begin
   #Fetches the specified portfolio item's icon image
-  api_instance.show_portfolio_item_icon(portfolio_item_id)
+  result = api_instance.show_portfolio_item_icon(portfolio_item_id)
+  p result
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioItemApi->show_portfolio_item_icon: #{e}"
 end
@@ -669,7 +670,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+**File**
 
 ### Authorization
 
@@ -678,7 +679,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: image/svg+xml
+- **Accept**: image/svg+xml, image/png, image/jpeg
 
 
 ## un_delete_portfolio_item

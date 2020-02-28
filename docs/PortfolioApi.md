@@ -1,10 +1,9 @@
 # CatalogApiClientRuby::PortfolioApi
 
-All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.0*
+All URIs are relative to *https://cloud.redhat.com//api/catalog/v1.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_portfolio_item_to_portfolio**](PortfolioApi.md#add_portfolio_item_to_portfolio) | **POST** /portfolios/{portfolio_id}/portfolio_items | Add a portfolio item to a portfolio
 [**add_portfolio_tag**](PortfolioApi.md#add_portfolio_tag) | **POST** /portfolios/{id}/tag | Add Tag for Portfolio
 [**create_portfolio**](PortfolioApi.md#create_portfolio) | **POST** /portfolios | Add a new portfolio
 [**destroy_portfolio**](PortfolioApi.md#destroy_portfolio) | **DELETE** /portfolios/{id} | Delete an existing portfolio
@@ -23,63 +22,9 @@ Method | HTTP request | Description
 
 
 
-## add_portfolio_item_to_portfolio
-
-> add_portfolio_item_to_portfolio(portfolio_id, add_portfolio_item)
-
-Add a portfolio item to a portfolio
-
-Adds a new portfolio item to an existing portfolio.
-
-### Example
-
-```ruby
-# load the gem
-require 'catalog-api-client-ruby'
-# setup authorization
-CatalogApiClientRuby.configure do |config|
-  # Configure HTTP basic authorization: BasicAuth
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
-
-api_instance = CatalogApiClientRuby::PortfolioApi.new
-portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
-add_portfolio_item = CatalogApiClientRuby::AddPortfolioItem.new # AddPortfolioItem | 
-
-begin
-  #Add a portfolio item to a portfolio
-  api_instance.add_portfolio_item_to_portfolio(portfolio_id, add_portfolio_item)
-rescue CatalogApiClientRuby::ApiError => e
-  puts "Exception when calling PortfolioApi->add_portfolio_item_to_portfolio: #{e}"
-end
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **portfolio_id** | **String**| The Portfolio ID | 
- **add_portfolio_item** | [**AddPortfolioItem**](AddPortfolioItem.md)|  | 
-
-### Return type
-
-nil (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-
 ## add_portfolio_tag
 
-> Array&lt;TagItem&gt; add_portfolio_tag(id, tag_item)
+> Array&lt;Tag&gt; add_portfolio_tag(id, tag)
 
 Add Tag for Portfolio
 
@@ -99,11 +44,11 @@ end
 
 api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+tag = [CatalogApiClientRuby::Tag.new] # Array<Tag> | 
 
 begin
   #Add Tag for Portfolio
-  result = api_instance.add_portfolio_tag(id, tag_item)
+  result = api_instance.add_portfolio_tag(id, tag)
   p result
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->add_portfolio_tag: #{e}"
@@ -116,11 +61,11 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ID of the resource | 
- **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+ **tag** | [**Array&lt;Tag&gt;**](Tag.md)|  | 
 
 ### Return type
 
-[**Array&lt;TagItem&gt;**](TagItem.md)
+[**Array&lt;Tag&gt;**](Tag.md)
 
 ### Authorization
 
@@ -474,7 +419,7 @@ Name | Type | Description  | Notes
 
 ## remove_portfolio_tags
 
-> remove_portfolio_tags(id, tag_item)
+> remove_portfolio_tags(id, tag)
 
 Remove Tags from Portfolio
 
@@ -494,11 +439,11 @@ end
 
 api_instance = CatalogApiClientRuby::PortfolioApi.new
 id = 'id_example' # String | ID of the resource
-tag_item = [CatalogApiClientRuby::TagItem.new] # Array<TagItem> | 
+tag = [CatalogApiClientRuby::Tag.new] # Array<Tag> | 
 
 begin
   #Remove Tags from Portfolio
-  api_instance.remove_portfolio_tags(id, tag_item)
+  api_instance.remove_portfolio_tags(id, tag)
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->remove_portfolio_tags: #{e}"
 end
@@ -510,7 +455,7 @@ end
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ID of the resource | 
- **tag_item** | [**Array&lt;TagItem&gt;**](TagItem.md)|  | 
+ **tag** | [**Array&lt;Tag&gt;**](Tag.md)|  | 
 
 ### Return type
 
@@ -688,7 +633,7 @@ Name | Type | Description  | Notes
 
 ## show_portfolio_icon
 
-> show_portfolio_icon(portfolio_id)
+> File show_portfolio_icon(portfolio_id)
 
 Fetches the specified portfolio's icon image
 
@@ -711,7 +656,8 @@ portfolio_id = 'portfolio_id_example' # String | The Portfolio ID
 
 begin
   #Fetches the specified portfolio's icon image
-  api_instance.show_portfolio_icon(portfolio_id)
+  result = api_instance.show_portfolio_icon(portfolio_id)
+  p result
 rescue CatalogApiClientRuby::ApiError => e
   puts "Exception when calling PortfolioApi->show_portfolio_icon: #{e}"
 end
@@ -726,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-nil (empty response body)
+**File**
 
 ### Authorization
 
@@ -735,7 +681,7 @@ nil (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: image/svg+xml
+- **Accept**: image/svg+xml, image/png, image/jpeg
 
 
 ## un_delete_portfolio

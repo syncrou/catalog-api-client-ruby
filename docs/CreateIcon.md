@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **File** | The binary image contents | [optional] 
+**content** | **File** | The binary image contents, maximum size is 250KB | [optional] 
 **portfolio_id** | **String** | The Portfolio this Icon belongs to | [optional] 
 **portfolio_item_id** | **String** | The Portfolio Item this Icon belongs to | [optional] 
 
